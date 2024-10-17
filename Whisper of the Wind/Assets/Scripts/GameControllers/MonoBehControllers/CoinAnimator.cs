@@ -1,0 +1,17 @@
+using DG.Tweening;
+using UnityEngine;
+
+namespace GameControllers.MonoBehControllers
+{
+    public class CoinAnimator : MonoBehaviour
+    {
+        private void Start()
+        {
+            DOTween.Sequence()
+                .Append(transform.DOScale(new Vector3(0.8f, 0.8f, 1f), 1f))
+                .Append(transform.DOScale(new Vector3(1f, 1f, 1f), 1f))
+                .SetLoops(-1, LoopType.Yoyo);
+        }
+    }
+}
+
